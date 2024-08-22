@@ -125,6 +125,9 @@ function showOverlay(id) {
 // Function to hide the overlay
 function hideOverlay(id) {
     document.getElementById(id).style.display = "none";
+    // also reset all scrolls
+
+
 }
 
 // Attach click event to each work item
@@ -133,6 +136,10 @@ document.querySelectorAll('.work-subitem').forEach((item, index) => {
     
     item.addEventListener('click', () => {
         showOverlay(overlayId);
+        let conts = document.getElementsByClassName("overlayContainer");
+	    for(var i=0;i<conts.length;i++){
+	    	conts[i].scrollTop=0;
+	    }
     });
     
     document.getElementById(overlayId).addEventListener('click', () => {
