@@ -126,6 +126,12 @@ input, select, textarea {
 		font-weight: 400;
 	}
 
+
+	mark, mark {
+          color: #17202a ;
+          font-weight: 700;
+	}
+
 	em, i {
 		font-style: italic;
 	}
